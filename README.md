@@ -60,7 +60,7 @@ FROM `{materialized_table_id}`;
 # Question 3
 # Why are bytes different?
 # ANSWER:
-# BigQuery is columnar and scans only the columns needed by the query.
+# BigQuery is a columnar database, and it only scans the specific columns requested in the query. Querying two columns (PULocationID, DOLocationID) requires reading more data than querying one column (PULocationID), leading to a higher estimated number of bytes processed.
 # ===================================================================
 
 # ===================================================================
